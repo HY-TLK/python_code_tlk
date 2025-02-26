@@ -14,7 +14,7 @@ while True:
 
 # Ask the user to enter their score
 # Store the score in a variable
-    user_score = float(input("Please enter your score: "))
+    user_score = float(input("Please enter your score in numbers from 1 to 100: "))
 
 # Use conditional statements to print the grade based on the score
 # If the score is greater than or equal to 90, print: "Grade: A"

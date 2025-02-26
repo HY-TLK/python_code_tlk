@@ -107,10 +107,9 @@ print("Exercise 7 : ")
 #    prices = {"apple": 1.2, "banana": 0.5, "cherry": 2.5, "mango": 3.0}
 prices = {"apple": 1.2, "banana": 0.5, "cherry": 2.5, "mango": 3.0}
 # 2. Create a new dictionary `affordable` containing only key-value pairs where the value is less than `2.0`.
+# 3. Print the new dictionary.
 affordable = {}
 for key,value in prices.items():
     if value < 2:
         affordable[key] = value
 print(affordable)
-
-# 3. Print the new dictionary.
