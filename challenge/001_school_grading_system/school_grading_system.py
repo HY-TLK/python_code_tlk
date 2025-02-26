@@ -1,5 +1,5 @@
 #---------------------------------------------------------------
-# Name:         School Grading System (005_day_of_the_week_activity_recommend.py)
+# Name:         School Grading System (001_school_grading_system.py)
 # Purpose:      To create a system for school grading
 #
 # Author:       Harry Yang
