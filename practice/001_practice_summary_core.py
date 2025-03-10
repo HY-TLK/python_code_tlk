@@ -24,3 +24,21 @@ for s in students_dict_12.values():
         break
     else:
         print("You have not entered the name.")
+
+
+# 16. **Recursive Dictionary Sum**
+print("\nQuestion 16: ")
+#     - **Problem**: Traverse a nested dictionary (e.g., `{'a': 1, 'b': {'c': 2, 'd': {'e': 3}}}`)
+sample_dict_16 = {'a': 1, 'b': {'c': 2, 'd': {'e': 3}}}
+#     and sum all values. The output should be `6`.
+
+
+# 18. **Power Set Generation**
+print("\nQuestion 18: ")
+#     - **Problem**: Generate all subsets of a set. For example, the power set of `{1,2}` is `{ }, {1}, {2}, {1,2}`.
+sample_set_18 = {2,5,7}
+list_18 = list(sample_set_18)
+res = [[]]
+for each in list_18:
+    res += [subset + [each] for subset in res]
+print(res)

@@ -144,45 +144,107 @@ print(list_13)
 # 14. **Nested List Depth Calculation**
 print("\nQuestion 14: ")
 #     - **Problem**: Given a nested list like `[1, [2, [3, 4], 5], 6]`,
-nested_list_14 = [1,[2,[3,4],5],6]
 #     write a function to calculate its depth (e.g., depth 3).
-depth = 0
-
 
 # 15. **Closest Element to Target**
+print("\nQuestion 15: ")
 #     - **Problem**: Find the element in a list closest to a target value.
-#     For example, in `[4,7,5,9,2]` with target `6`, the closest element is `7`.
+#     For example, in `[4,7,5,9,2]` with target `6`, the closest element is `7` and `5`.
+sample_list_15 = [4,7,5,9,2]
+target_number = 6
+print(f"Target number: {target_number} ")
+delta = [abs(i - target_number) for i in sample_list_15]
+closest_elements = [i for i in sample_list_15 if abs(i - target_number) == min(delta)]
+print(closest_elements)
 
 # 16. **Recursive Dictionary Sum**
+print("\nQuestion 16: ")
 #     - **Problem**: Traverse a nested dictionary (e.g., `{'a': 1, 'b': {'c': 2, 'd': {'e': 3}}}`)
+sample_dict_16 = {'a': 1, 'b': {'c': 2, 'd': {'e': 3}}}
 #     and sum all values. The output should be `6`.
 
+
 # 17. **Dynamic Dictionary Creation**
+print("\nQuestion 17: ")
 #     - **Problem**: Convert a string of key-value pairs (e.g., `"apple:1, banana:2, orange:3"`)
+a = "apple:1,banana:2,orange:3"
 #     into a dictionary `{'apple':1, 'banana':2, 'orange':3}`.
+b = a.split(",")
+c = [b[i].split(":") for i in range(0,len(b))]
+zip_1 = [c[x][0] for x in range(0,len(c))]
+zip_2 = [int(c[x][1]) for x in range(0,len(c))]
+print(dict(zip(zip_1,zip_2)))
+
 
 # 18. **Power Set Generation**
+print("\nQuestion 18: ")
 #     - **Problem**: Generate all subsets of a set. For example, the power set of `{1,2}` is `{ }, {1}, {2}, {1,2}`.
+sample_set_18 = {2,5,7}
+list_18 = list(sample_set_18)
+res = [[]]
+for each in list_18:
+    res += [subset + [each] for subset in res]
+print(res)
 
 # 19. **Vowel Counting**
+print("\nQuestion 19: ")
 #     - **Problem**: Count the occurrences of vowels (`a, e, i, o, u`) in a string and store the results in a dictionary.
+vowels = ['a', 'e', 'i', 'o', 'u']
 #     For example, `"hello"` should result in `{'a':0, 'e':1, 'i':0, 'o':1, 'u':0}`.
+user_input_19 = "hello"
+times_list = []
+for vowel in vowels:
+    if vowel in user_input_19:
+        times = user_input_19.count(vowel)
+        times_list.append(times)
+    if vowel not in user_input_19:
+        times_list.append(0)
+dict_19 = dict(zip(vowels,times_list))
+print(dict_19)
 
 # 20. **Infinite Loop with Exit Command**
-#     - **Problem**: Continuously prompt the user for input until `exit` is entered. Store all inputs in a list and output them at the end.
+print("\nQuestion 20: ")
+#     - **Problem**: Continuously prompt the user for input until `exit` is entered.
+#     Store all inputs in a list and output them at the end.
+output_20 = []
+while True:
+    user_input_20 = input("type anything you want: ")
+    if bool(user_input_20) == True:
+        output_20.append(user_input_20)
+        print(output_20)
+    else:
+        print("done!")
+        break
 
 # 21. **List Chunking**
+print("\nQuestion 21: ")
 #     - **Problem**: Implement a function `split_list(lst, chunk_size)` to split a list into sublists of size `chunk_size`.
 #     For example, `[1,2,3,4,5,6]` with `chunk_size=2` becomes `[[1,2], [3,4], [5,6]]`.
+sample_list_21 = [1,2,3,4,5,6]
+user_input_21 = int(input("enter a chunk size: "))
+nested_list_21 = [sample_list_21[i:i+user_input_21] for i in range(0,len(sample_list_21)) if i % user_input_21 == 0]
+print(nested_list_21)
 
 # 22. **Dictionary Key Order Reversal**
-#     - **Problem**: In Python 3.7+, reverse the order of keys in a dictionary (e.g., `{'a':1, 'b':2, 'c':3}` becomes `{'c':3, 'b':2, 'a':1}`).
+print("\nQuestion 22: ")
+#     - **Problem**:reverse the order of keys in a dictionary
+#     (e.g., `{'a':1, 'b':2, 'c':3}` becomes `{'c':3, 'b':2, 'a':1}`).
+sample_dict_22 = {"a":1,"b":2,"c":3}
+reverse_key_dict_22 = dict(zip(reversed(sample_dict_22.keys()),sample_dict_22.values()))
+print(reverse_key_dict_22)
 
 # 23. **Set Symmetric Difference**
-#     - **Problem**: Compute the symmetric difference of two sets (elements in either set but not both). For example, `{1,2,3}` and `{2,3,4}` results in `{1,4}`.
+print("\nQuestion 23: ")
+#     - **Problem**: Compute the symmetric difference of two sets (elements in either set but not both).
+#     For example, `{1,2,3}` and `{2,3,4}` results in `{1,4}`.
+sample_set_23_1 = {1,2,3}
+sample_set_23_2 = {2,3,4}
+print(sample_set_23_1^sample_set_23_2)
 
 # 24. **Prime Number Generation**
+print("\nQuestion 24: ")
 #     - **Problem**: Generate a list of prime numbers from 1 to 100 using list comprehension.
+
 
 # 25. **String Parsing into Dictionary**
 #     - **Problem**: Convert a string like `"apple:1, banana:2, orange:3"` into a dictionary `{'apple':1, 'banana':2, 'orange':3}`.
