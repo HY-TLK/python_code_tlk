@@ -244,13 +244,25 @@ print(sample_set_23_1^sample_set_23_2)
 # 24. **Prime Number Generation**
 print("\nQuestion 24: ")
 #     - **Problem**: Generate a list of prime numbers from 1 to 100 using list comprehension.
-
+prime_number = [i for i in range (2,101) if all(i % x != 0 for x in range (2,i))]
+print(prime_number)
 
 # 25. **String Parsing into Dictionary**
+print("\nQuestion 25: ")
 #     - **Problem**: Convert a string like `"apple:1, banana:2, orange:3"` into a dictionary `{'apple':1, 'banana':2, 'orange':3}`.
+sample_string_25 = "apple:1, banana:2, orange:3"
+dict_25 = {k.strip():int(v) for k,v in (pairs.split(":") for pairs in sample_string_25.split(","))}
+print(dict_25)
 
 # 26. **Word Length Statistics**
+print("\nQuestion 26: ")
 #     - **Problem**: Read a text file, count the length of each word, store the results in a dictionary, and calculate the average word length.
+text_file = "apple,banana,cherry,date,egg,flower,green"
+len_text = [len(each) for each in text_file.split(",")]
+dict_26 = {k.strip():int(v) for k,v in zip(text_file.split(","),len_text)}
+print(dict_26)
+average_len = sum(len_text) / len(len_text)
+print(average_len)
 
 # 27. **Matrix Transposition**
 #     - **Problem**: Transpose a matrix (e.g., `[[1,2,3], [4,5,6]]`) and store the result in a dictionary where keys are original row indices and values are column lists: `{0: [1,4], 1:[2,5], 2:[3,6]}`.
