@@ -42,3 +42,10 @@ res = [[]]
 for each in list_18:
     res += [subset + [each] for subset in res]
 print(res)
+
+# 25. **String Parsing into Dictionary**
+print("\nQuestion 25: ")
+#     - **Problem**: Convert a string like `"apple:1, banana:2, orange:3"` into a dictionary `{'apple':1, 'banana':2, 'orange':3}`.
+sample_string_25 = "apple:1, banana:2, orange:3"
+dict_25 = {k.strip():int(v) for k,v in (pairs.split(":") for pairs in sample_string_25.split(","))}
+print(dict_25)
