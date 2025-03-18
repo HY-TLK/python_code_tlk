@@ -265,47 +265,140 @@ average_len = sum(len_text) / len(len_text)
 print(average_len)
 
 # 27. **Matrix Transposition**
+print("\nQuestion 27: ")
 #     - **Problem**: Transpose a matrix (e.g., `[[1,2,3], [4,5,6]]`) and store the result in a dictionary where keys are original row indices and values are column lists: `{0: [1,4], 1:[2,5], 2:[3,6]}`.
+matrix = [[1,2,3],
+          [4,5,6]]
+dict_27 = {i:list(col) for i,col in enumerate(zip(*matrix))}
+print(dict_27)
 
 # 28. **Dictionary Sorting and Filtering**
+print("\nQuestion 28: ")
 #     - **Problem**: Given `{'apple':5, 'banana':3, 'orange':4, 'grape':2}`, sort by values in descending order and filter values ≥3. The result should be `{'apple':5, 'orange':4, 'banana':3}`.
+sample_dict_28 = {"apple":5,"banana":3,"orange":4,"grape":2}
+sorted_dict_28 = dict(sorted(sample_dict_28.items(),key = lambda x: x[1],reverse = True))
+print(sorted_dict_28)
+filter_items = dict(filter(lambda x: x[1] >= 3 , sorted_dict_28.items()))
+print(filter_items)
 
 # 29. **Fibonacci Sequence Generation**
+print("\nQuestion 29: ")
 #     - **Problem**: Generate the first `n` Fibonacci numbers. For example, `n=5` results in `[0,1,1,2,3]`.
+user_input_29 = int(input("please enter an integer: "))
+a = 0
+b = 1
+print(a)
+for _ in range(user_input_29-1):
+    a,b = b,a+b
+    print(a)
 
 # 30. **Substring Matching**
+print("\nQuestion 30: ")
 #     - **Problem**: Check if a string contains a specific substring. For example, determine if `"hello world"` contains `"llo"`.
+original_string = "hello world"
+user_input_30 = input("please enter some letters: ")
+if user_input_30 in original_string:
+    print(f"'{user_input_30}' is in '{original_string}")
+else:
+    print(f"'{user_input_30}' is not in '{original_string}'")
 
 # 31. **Dictionary Key-Value Swap and Sorting**
+print("\nQuestion 31: ")
 #     - **Problem**: Swap keys and values in a dictionary and sort the new dictionary by keys. For example, `{'a':1, 'b':2}` becomes `{'1':'a', '2':'b'}`.
+sample_dict_31 = {"a":1,"b":2}
+dict_31 = {v:k for k,v in sample_dict_31.items()}
+print(dict_31)
 
 # 32. **Dynamic Set Updates**
+print("\nQuestion 32: ")
 #     - **Problem**: Maintain a set where users can continuously add elements until `stop` is entered. Output the set’s state after each addition.
+content = []
+while True:
+    user_input_32 = input("please enter anyything you want: ")
+    if user_input_32.lower() != "stop":
+        content.append(user_input_32)
+        print(content)
+    else:
+        print("stop typing")
+        break
 
 # 33. **List Reversal with Slicing**
+print("\nQuestion 33: ")
 #     - **Problem**: Reverse a sublist in a list. For example, reversing indices 1-3 in `[1,2,3,4,5]` results in `[1,4,3,2,5]`.
+sample_list_33 = [1,2,3,4,5]
+while True:
+    user_input_33 = input("please enter an starting index and a ending index and seperate them with a comma: ")
+    indexes = [int(i) for i in user_input_33.split(",")]
+    if all(0<int(i)<=len(sample_list_33)-1 for i in indexes):
+        break
+    else:
+        print("out of range,please try again\n")
+sample_list_33[indexes[0]:indexes[1]+1] = sample_list_33[indexes[0]:indexes[1]+1][::-1]
+print(sample_list_33)
 
 # 34. **Nested Dictionary Dynamic Access**
+print("\nQuestion 34: ")
 #     - **Problem**: Given a nested dictionary like `{'x': {'y': {'z': 10}}}`,
 #     write a function to access the value using a key path (e.g., `['x','y','z']` returns `10`).
+sample_dict_34 = {'x': {'y': {'z': 10}}}
+user_input_34 = input("please enter your key path: ")
+keys = user_input_34.split(",")
 
 # 35. **Set Union and Equality**
+print("\nQueation 35: ")
 #     - **Problem**: Given two sets `A` and `B`, determine the condition under which `A ∪ B == A`. Verify this condition with code.
+A = {1,2,3,4,5}
+B = {2,3,4}
+print(A | B == A)
 
 # 36. **Score Categorization**
+print("\nQuestion 36: ")
 #     - **Problem**: Classify a random number between 0 and 100:
 #       - <30 → Warning
 #       - 30-70 → Normal
 #       - >70 → High
 #     Use conditional branches to implement this.
+import random
+random_number = random.randint(0,100)
+if random_number < 30:
+    print("Warning")
+elif 30 <= random_number <= 70:
+    print("Normal")
+elif 70 < random_number <= 100:
+    print("High")
 
-# 37. **List Merging Without Sorting**
-#     - **Problem**: Merge two lists `[1,3,5]` and `[2,4,6]` into `[1,2,3,4,5,6]` without using `sorted()`.
-
-# 38. **Dictionary Default Values**
+# 37. **Dictionary Default Values**
+print("\nQuestion 37: ")
 #     - **Problem**: Create a dictionary `scores` with default value `0`. When accessing a non-existent key, return `0`.
 #     For example, `scores = {"a": 100}`, accessing `scores['b']` returns `0`.
+score = {"a":100}
+while True:
+    user_input_37 = input("please enter a key: ")
+    if user_input_37 in score:
+        print(score[user_input_37])
+    elif bool(user_input_37) == False:
+        break
+    else:
+        score.setdefault(user_input_37,0)
+        print(score[user_input_37])
 
-# 39. **Exam Scoring System with Validation**
+# 38. **Exam Scoring System with Validation**
+print("\nQuestion 38: ")
 #     - **Problem**: Simulate an exam scoring system. Users input student names and scores (0-100).
 #     If a score is below 60, prompt for re-entry. Store results in a dictionary until `exit` is entered.
+# 38. **Exam Scoring System with Validation**
+print("\nQuestion 38: ")
+#Simulate an exam scoring system.
+#Users input student names and scores (0-100).
+#If a score is below 60, prompt for re-entry.
+#Store results in a dictionary until `exit` is entered.
+dict_38 = {}
+while True:
+    user_input_38 = input("Please enter your name and your score (or 'exit' to stop): ")
+    if user_input_38.lower() == 'exit':
+        break
+    elif int(user_input_38.split()[1]) >= 60:
+        dict_38.update({user_input_38.split()[0]: int(user_input_38.split()[1])})
+        print(dict_38)
+    else:
+        print("too low! please try again!")
