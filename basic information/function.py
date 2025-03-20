@@ -88,44 +88,6 @@ def create_user(*, username, email):
 create_user(username="alice123", email="alice@example.com")
 # create_user("alice123", "alice@example.com")  # Invalid: arguments must be keyword-only
 
-# ==============================================================================
-# 9. COLLECTING PARAMETERS
-# ==============================================================================
-
-# Using *args to collect positional arguments into a tuple
-def myfunc(*args):
-    """
-    Demonstrates collecting positional arguments.
-    *args packs all positional arguments into a tuple.
-    """
-    print(f"{len(args)} arguments")  # Number of arguments
-    if len(args) >= 2:
-        print(f"the second number is {args[1]}")  # Accessing specific argument
-    print(args)  # Entire tuple of arguments
-
-myfunc(1, 4, 8)  # Calling with multiple positional arguments
-
-
-# Returning multiple values (implicitly returns a tuple)
-def myfunc():
-    """
-    Returns multiple values which are packed into a tuple.
-    """
-    return 1, 2, 3
-
-print(myfunc())  # Output: (1, 2, 3)
-x, y, z = myfunc()  # Unpacking the tuple into variables
-
-
-# Combining collected arguments with keyword-only arguments
-def myfunc(*args, a, b):
-    """
-    Shows combining collected positional arguments with keyword-only arguments.
-    *args collects positional arguments, while 'a' and 'b' must be keyword arguments.
-    """
-    print(f"Positional args: {args}, Keyword args: a={a}, b={b}")
-
-myfunc(1, 2, a=3, b=4)  # Positional then keyword arguments
 
 # 9. COLLECTING PARAMETERS
 # Using *args to collect positional arguments into a tuple
