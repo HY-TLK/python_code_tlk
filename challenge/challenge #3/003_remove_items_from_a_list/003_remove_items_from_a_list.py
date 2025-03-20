@@ -7,14 +7,16 @@
 #-----------------------------------------------------------------------------
 
 # Create a list todo_list
-tool_list = ["write email","finish homework","call mom","clean room"]
+todo_list = ["write email","finish homework","call mom","clean room"]
+print("the list of what we are going to ", todo_list)
 
 # Remove "call mom" from the list
-tool_list.remove("call mom")
+print("Mom is coming. We don't need to call her.")
+todo_list.remove("call mom")
 
 # Print the updated list
-print(tool_list)
+print("the list of what we are going to ", todo_list)
 
 # Remove "clean room" from the list and print the final list
-tool_list.remove("clean room")
-print(tool_list)
+todo_list.remove("clean room")
+print("I spend 30 minutes cleaning the room! Here is the rest of thing i need to do: ",todo_list)

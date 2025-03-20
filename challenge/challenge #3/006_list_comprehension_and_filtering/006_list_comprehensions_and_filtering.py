@@ -7,7 +7,9 @@
 #-----------------------------------------------------------------------------
 
 # Create a list numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+print("here is a list of numbers")
 nums = [1,2,3,4,5,6,7,8,9,10]
+print(nums)
 
 # Using a list comprehension, create a new list even_numbers that contains only the even numbers from the numbers list.
 even_nums = [i for i in nums if i % 2 == 0]

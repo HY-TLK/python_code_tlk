@@ -16,9 +16,11 @@ students[1][1] = 23
 students[1][2] = "Mathematics"
 
 # Print the updated students list.
+print("Change Bob's age to 23 and his major to 'Mathematics'")
 print(students)
 
 # Access and print the name of the student who is studying 'Biology'.
+print("we need a student who is studying 'Biology'")
 for i in range(len(students)):
     if students[i][2] == "Biology":
         print(students[i][0])

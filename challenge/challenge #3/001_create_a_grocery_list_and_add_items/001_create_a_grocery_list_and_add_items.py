@@ -8,6 +8,9 @@
 
 # Create a list called grocery_list
 grocery_list = ["apple","bread","milk","egg"]
+print(grocery_list)
+
+print("We are going to add two more items in the grocery list")
 
 # Add two more items to the list: 'cheese' and 'tomatoes'
 grocery_list.extend(["cheese","tomatoes"])

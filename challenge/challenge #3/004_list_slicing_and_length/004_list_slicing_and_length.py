@@ -11,7 +11,7 @@ colors = ["red","blue","green","yellow","purple"]
 
 # Slice the list to get the second and the third colors
 # And print it
-print(colors[1:3])
+print("the second and the third number is",colors[1:3])
 
 # Print the length of the colors lost
-print(len(colors))
+print("there are ",len(colors)," kinds of colors in the list")
