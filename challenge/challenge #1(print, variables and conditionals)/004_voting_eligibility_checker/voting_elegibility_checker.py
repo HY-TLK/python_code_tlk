@@ -13,16 +13,15 @@ print()
 # Store the age in a variable.
 age_input = int(input("please enter your age: "))
 
-
 #Use conditional statements to check if the person is eligible to vote.
 
 #If the age is 18 or older, print: `"You are eligible to vote!"`
 if age_input > 18:
-    print("You are eligible to vote!")
+    print(f"Wow! You're {age_input} years old! You are eligible to vote!")
 
 #If the age is under 18, print: `"Sorry, you are not eligible to vote yet."`
 elif age_input < 18:
-    print("Sorry, You are not eligible to vote!")
+    print(f"Oh! You're {age_input} years old! Sorry, You are not eligible to vote!")
 
 
 
