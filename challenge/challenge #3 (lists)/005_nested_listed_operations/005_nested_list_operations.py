@@ -10,6 +10,7 @@
 students = [['Alice', 25, 'Physics'],
             ['Bob', 22, 'Chemistry'],
             ['Charlie', 24, 'Biology']]
+print("students" , students)
 
 # Change Bob's age to 23 and his major to 'Mathematics'.
 students[1][1] = 23

@@ -8,6 +8,7 @@
 
 # Create a list of colors
 colors = ["red","blue","green","yellow","purple"]
+print("the original list of colors is ", colors)
 
 # Slice the list to get the second and the third colors
 # And print it

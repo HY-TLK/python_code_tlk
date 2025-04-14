@@ -8,7 +8,7 @@
 
 # Create a list fruits = ['banana', 'apple', 'grape', 'kiwi', 'orange'].
 fruits = ["banana","apple","grape","kiwi","orange"]
-
+print("We have:",fruits)
 # Sort the list fruits in alphabetical order (ascending).
 # Then, reverse the sorted list to get it in descending order.
 # Print both the sorted list and the reversed list.

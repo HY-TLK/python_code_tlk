@@ -8,7 +8,7 @@
 
 # Start with the list: grocery_list
 grocery_list = ["apples","bananas","carrots","milk","bread"]
-print(grocery_list)
+print("The original grocery list is" , grocery_list)
 
 # Change 'bananas' to 'grapes'.
 print("We are going to change bananas to grapes")

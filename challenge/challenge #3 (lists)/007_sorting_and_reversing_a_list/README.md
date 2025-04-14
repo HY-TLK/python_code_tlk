@@ -1,7 +1,7 @@
 Objective: Work with sorting and reversing lists.
 
 Task:
-Create a list fruits = ['banana', 'apple', 'grape', 'kiwi', 'orange'].
+Create a list `fruits` = ['banana', 'apple', 'grape', 'kiwi', 'orange'].
 
 
 Sort the list fruits in alphabetical order (ascending).
