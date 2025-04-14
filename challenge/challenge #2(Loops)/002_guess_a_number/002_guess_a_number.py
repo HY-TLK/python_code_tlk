@@ -31,6 +31,7 @@ while True:
     # Get the correct answer
     if user_input == number:
         attempt += 1
+        print("The number is ", number)
         print(f"After {attempt} tries! Correct!")
         break
     # Out of range
