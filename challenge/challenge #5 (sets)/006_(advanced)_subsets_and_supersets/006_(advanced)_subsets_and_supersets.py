@@ -11,7 +11,7 @@ print("original letters : ", letters)
 
 # - Add multiple elements: `'d'`, `'e'`, `'f'`.
 letters.update({"d","e","f"})
-print("after adding mutiple elements , letters : ", letters)
+print("after adding multiple elements , letters : ", letters)
 
 # - Remove `'b'` using `.discard()`.
 letters.discard("d")

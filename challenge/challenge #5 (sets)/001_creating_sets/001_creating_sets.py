@@ -9,4 +9,5 @@
 # - Create a set called `fruits` with the following items: `'apple'`, `'banana'`, `'cherry'`.
 fruits = {"apple" , "banana" , "cherry"}
 # - Print the set.
+print("the set is created!")
 print("the fruits set: `" , fruits)
