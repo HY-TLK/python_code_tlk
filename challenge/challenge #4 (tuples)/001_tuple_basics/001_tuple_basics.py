@@ -13,7 +13,7 @@
 
 # Create a tuple with five different elements, including an integer, a float, a boolean, and another tuple
 sample_tuple = (1 , 2.3 , "harry" , True , (7,8,9))
-print("tuple is created")
+print(sample_tuple ,"\ntuple is created")
 
 # Print the entire tuple
 print("the entire tuple is: " , sample_tuple)
