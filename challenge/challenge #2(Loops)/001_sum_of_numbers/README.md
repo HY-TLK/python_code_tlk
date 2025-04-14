@@ -12,6 +12,6 @@ INITIALIZE `sum = 0`
 
 END `FOR`
 
-DISPLAY `"Sum ="`, `sum`
+DISPLAY `"sum ="`, `sum`
 
 END
