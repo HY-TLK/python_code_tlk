@@ -19,27 +19,27 @@ while True:
 # Use conditional statements to print the grade based on the score
 # If the score is greater than or equal to 90, print: "Grade: A"
     if 90 <= user_score <= 100 :
-        print("Grade:A")
+        print("Grade:A! Amazing!")
         print("Thank you for grading")
         break
 # If the score is between 80 and 89, print: "Grade: B"
     elif 80 <= user_score <=89 :
-        print("Grade:B")
+        print("Grade:B! Good!")
         print("Thank you for grading")
         break
 # If the score is between 70 and 79, print: "Grade: C"
     elif 70 <= user_score <= 79 :
-        print("Grade:C")
+        print("Grade:C! Not bad!")
         print("Thank you for grading")
         break
 # If the score is between 60 and 69, print: "Grade: D"
     elif 60 <= user_score <= 69 :
-        print("Grade:D")
+        print("Grade:D! Need Improvement!")
         print("Thank you for grading")
         break
 # If the score is below 60, print: "Grade: E"
     elif 0 < user_score < 60:
-        print("Grade:E")
+        print("Grade:E! You need to study hard for it!")
         print("Thank you for grading")
         break
 # If the score is greater than 100 or smaller than 0 , it will show "ERROR"

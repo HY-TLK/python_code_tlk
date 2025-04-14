@@ -20,7 +20,7 @@ if tem_input < 10:
 
 # If the temperature is between 10°C and 25°C, print: `"It's a nice day. Wear short-sleeves!"`
 elif 10 < tem_input < 25:
-    print(f" It's {tem_input} degrees.it's a nice day! wear short sleeves!")
+    print(f" It's {tem_input} degrees.It's a nice day! wear short sleeves!")
 
 # If the temperature is above 25°C, print: `"It's hot outside. Stay cool!"`
 elif tem_input > 25:
