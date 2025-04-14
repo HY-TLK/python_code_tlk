@@ -1,6 +1,7 @@
 START
 
 DISPLAY `"Enter a number: "`
+
 READ n
 
 INITIALIZE `sum = 0`
