@@ -15,8 +15,8 @@ number_input = int(input("please enter a number: "))
 
 # Even number
 if number_input % 2 == 0:
-    print("this number is even")
+    print(f"{number_input} is an even number.")
 
 # Odd number
 elif number_input % 2 != 0:
-    print("this number is odd")
+    print(f"{number_input} is an odd number.")
